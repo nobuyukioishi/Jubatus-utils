@@ -1,4 +1,5 @@
 # Jubatus-utils
+**This is only for jubatus-classifier.**
 
 usage: jubatus_model_controller.py [-h] [-m MODE] [-n NAME] [--host HOST]
                                    [--port PORT]
