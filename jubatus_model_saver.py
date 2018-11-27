@@ -12,10 +12,9 @@ print(args)
 host_ip = args.host if args.host else socket.gethostbyname(socket.gethostname())
 port = args.port if args.port else 9199
 
-if args.mode == "save" or args.mode == "s":
-    client = Classifier(host_ip, port, '')
-    if args.name:
-        client.save(args.name)
-        print("file saved at /tmp of the "+host_ip+" unless you specified output path with -d/--datadir when you started server process.")
-    else:
-        print("[Error] specify the model's name to be saved!")
+client = Classifier(host_ip, port, '')
+if args.name:
+    client.save(args.name)
+    print("file saved at /tmp of the "+host_ip+" unless you specified output path with -d/--datadir when you started server process.")
+else:
+    print("[Error] specify the model's name to be saved!")
